@@ -44,7 +44,9 @@ quarter = 0.25
 
 money = 0.0
 
-while True:
+off = False
+
+while not off:
     request = input("What would you like? (espresso/latte/cappuccino) 🍵☕: ")
 
     if request in MENU:
@@ -68,7 +70,8 @@ while True:
         printReport(resources, money)
 
     elif request == "off":
+        off = True
         print("Shutting down...")
-        break
+        # break
     else:
         print("Invalid input. Please try again...")
