@@ -19,9 +19,8 @@ while not off:
         coffee = menus.find_drink(request)
         cost = coffee.cost
 
-        if coffeeMaker.is_resource_sufficient(coffee):
-            if moneyMachine.make_payment(cost):
-                coffeeMaker.make_coffee(coffee)
+        if coffeeMaker.is_resource_sufficient(coffee) and moneyMachine.make_payment(cost):
+            coffeeMaker.make_coffee(coffee)
 
     elif request == 'off':
         print("Shutting down...")
