@@ -1,7 +1,7 @@
 import colorgram
 
 # Extract 30 colours from an image
-# colours = colorgram.extract('../Files/amandla.png', 30)
+# colours = colorgram.extract('File Path', 30)
 # rgb_colours = []
 # for colour in colours:
 #     red = colour.rgb.r
