@@ -33,6 +33,17 @@ class Snake:
             s.goto(x=0 + i * -20, y=0)  # Move the snake to the left by 20 pixels each time
             self.snakes.append(s)
 
+    def extend(self):
+        """
+        Extend the snake by adding a new circle to the end of the snake
+        :return:
+        """
+        s = Turtle('circle')
+        s.color('white')
+        s.penup()
+        s.goto(self.snakes[-1].xcor(), self.snakes[-1].ycor())  # Move the new snake to the last snake's position
+        self.snakes.append(s)
+
     def move(self):
         """
         Move the snake forward by 20 pixels
