@@ -17,6 +17,7 @@ class Snake:
         """
         self.snakes = list()
         self.create_snake()
+        self.head = self.snakes[0]
         self.game_over = False
 
     def create_snake(self):
@@ -83,5 +84,5 @@ class Snake:
         """
         screen = Screen()
         screen.update()
-        time.sleep(.1)
+        time.sleep(.2)
         self.move()
