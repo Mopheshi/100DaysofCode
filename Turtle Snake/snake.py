@@ -97,3 +97,10 @@ class Snake:
         screen.update()
         time.sleep(.2)
         self.move()
+
+    def reset(self):
+        for snake in self.snakes:
+            snake.goto(1000, 1000)
+        self.snakes.clear()
+        self.create_snake()
+        self.head = self.snakes[0]
